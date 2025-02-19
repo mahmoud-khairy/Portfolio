@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Khairy | Mechatronics Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-code"></i>
+                MK
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    About
+                </a>
+                <a href="#education" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </a>
+                <a href="#skills" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    Skills
+                </a>
+                <a href="#projects" class="nav-link">
+                    <i class="fas fa-laptop-code"></i>
+                    Projects
+                </a>
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- animated-background -->
+<div class="animated-background">
+    <svg class="background-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <defs>
+            <!-- Enhanced Gradient with More Color Stops -->
+            <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0A0A0A;stop-opacity:1" />
+                <stop offset="20%" style="stop-color:#1a1a1a;stop-opacity:1" />
+                <stop offset="40%" style="stop-color:#C4A467;stop-opacity:0.15" />
+                <stop offset="60%" style="stop-color:#1a1a1a;stop-opacity:1" />
+                <stop offset="80%" style="stop-color:#C4A467;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#0A0A0A;stop-opacity:1" />
+            </linearGradient>
+
+            <!-- Improved Noise Filter -->
+            <filter id="noise">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="5" stitchTiles="stitch"/>
+                <feColorMatrix type="saturate" values="0"/>
+                <feComponentTransfer>
+                    <feFuncA type="discrete" tableValues="0 0.1 0.15"/>
+                </feComponentTransfer>
+            </filter>
+
+            <!-- Enhanced Glow Effect -->
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                <feComposite in="SourceGraphic" in2="coloredBlur" operator="over"/>
+            </filter>
+
+            <!-- Hexagon Pattern -->
+            <pattern id="hexagonPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M5,0 L10,2.5 L10,7.5 L5,10 L0,7.5 L0,2.5 Z" fill="#C4A467" fill-opacity="0.05"/>
+            </pattern>
+        </defs>
+
+        <!-- Base Background -->
+        <rect width="100%" height="100%" fill="url(#mainGradient)"/>
+        <rect class="noise-overlay" width="100%" height="100%" filter="url(#noise)" opacity="0.05"/>
+        
+        <!-- Hexagon Background Pattern -->
+        <rect width="100%" height="100%" fill="url(#hexagonPattern)" opacity="0.1"/>
+
+        <!-- Enhanced Animated Elements -->
+        <g class="glow-group">
+            <!-- Geometric Shapes -->
+            <path class="shape" d="M20,30 l5,0 l2.5,4.33 l-2.5,4.33 l-5,0 l-2.5,-4.33 z" fill="#C4A467" opacity="0.2"/>
+            <path class="shape" d="M70,60 l8,0 l4,6.93 l-4,6.93 l-8,0 l-4,-6.93 z" fill="#C4A467" opacity="0.15"/>
+            <path class="shape" d="M40,80 c0,2.76 -2.24,5 -5,5 s-5,-2.24 -5,-5 s2.24,-5 5,-5 S40,77.24 40,80" fill="#C4A467" opacity="0.1"/>
+
+            <!-- Decorative Lines -->
+            <path class="shape" d="M10,20 Q15,25 20,30" stroke="#C4A467" stroke-width="0.2" fill="none" opacity="0.1"/>
+            <path class="shape" d="M85,70 Q90,75 95,80" stroke="#C4A467" stroke-width="0.2" fill="none" opacity="0.1"/>
+            <path class="shape" d="M45,40 Q50,45 55,50" stroke="#C4A467" stroke-width="0.2" fill="none" opacity="0.1"/>
+
+            <!-- Enhanced Particles -->
+            <g class="particle" opacity="0.1">
+                <path d="M25,45 l2,-2 l2,2 l-2,2 z" fill="#C4A467"/>
+                <path d="M75,25 l1.5,-1.5 l1.5,1.5 l-1.5,1.5 z" fill="#C4A467"/>
+                <path d="M60,85 l1,-1 l1,1 l-1,1 z" fill="#C4A467"/>
+            </g>
+
+            <!-- Additional Decorative Elements -->
+            <circle class="shape accent" cx="15" cy="75" r="0.5" fill="#C4A467" opacity="0.2"/>
+            <circle class="shape accent" cx="85" cy="25" r="0.5" fill="#C4A467" opacity="0.2"/>
+            <circle class="shape accent" cx="50" cy="50" r="0.5" fill="#C4A467" opacity="0.2"/>
+        </g>
+    </svg>
+</div>
+
+
+
+
+
+
+
+
+    
+ <!-- Hero Section with Centered Name and Logos -->
+<section class="hero">
+    <div class="logo-container left">
+        <img src="logo3.png" alt="Mechatronics Logo" class="hero-logo floating">
+    </div>
+    
+    <div class="hero-content">
+        <div class="name-container">
+            <div class="hero-top-text">
+                <span class="welcome-text">Welcome to my portfolio</span>
+                <div class="animated-line"></div>
+            </div>
+            
+            <h1 class="main-title">
+                <span class="first-name">MAHMOUD</span>
+                <span class="last-name">KHAIRY</span>
+            </h1>
+            
+            <div class="title-separator">
+                <span class="line"></span>
+                <i class="fas fa-crown"></i>
+                <span class="line"></span>
+            </div>
+            
+            <h2 class="subtitle gradient-text">Mechatronics Engineer</h2>
+            
+            <div class="hero-icons">
+                <div class="icon-wrapper">
+                    <i class="fas fa-microchip"></i>
+                    <span class="icon-label">Hardware</span>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-cogs"></i>
+                    <span class="icon-label">Automation</span>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-robot"></i>
+                    <span class="icon-label">Robotics</span>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-code"></i>
+                    <span class="icon-label">Software</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="illustration-container">
+            <div class="illustration-wrapper">
+                <img src="in-the-zone.svg" alt="Programmer Illustration" class="programmer-img floating">
+                <div class="glow-effect"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="logo-container right">
+        <img src="logo2.png" alt="Mechatronics Logo" class="hero-logo flipped floating">
+    </div>
+    
+    <div class="scroll-indicator">
+        <div class="scroll-arrow-container">
+            <i class="fas fa-chevron-down bounce"></i>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- About Section with Infographics -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <!-- Left Side: Text and Info -->
+                <div class="about-text">
+                    <p>As a final-year student at Asia Pacific University specializing in Mechatronics Engineering, I am deeply passionate about innovating and applying interdisciplinary engineering principles to develop intelligent machines and advanced manufacturing systems.</p>
+                    
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bukit Jalil, Kuala Lumpur</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>tp066167@mail.apu.edu.my</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+60134457353</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-flag"></i>
+                            <span>Egypt (Residency: Kuwait)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Illustration -->
+                <div class="illustration-container">
+                    <div class="illustration-content">
+                        <object data="personal-goals.svg" type="image/svg+xml" class="goals-svg"></object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Education & Experience -->
+    <section class="education-experience" id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Engineering (Hons) in Mechatronics</h3>
+                        <p>Asia Pacific University (APU) • Expected 2024</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Masters of Engineering (Hons) in Mechatronics</h3>
+                        <p>De Montfort University (DMU) UK • Expected 2024</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Engineering Intern</h3>
+                        <p>Kuwait Aviation Fuelling Company (KAFCO)</p>
+                        <span class="date">June 2024 - November 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Showcase -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Robotics & Automation</h3>
+                    </div>
+                    <ul>
+                        <li>ROS2 & Gazebo</li>
+                        <li>PLC Programming</li>
+                        <li>Sensor Integration</li>
+                        <li>Motion Control</li>
+                    </ul>
+                </div>
+    
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Embedded Systems</h3>
+                    </div>
+                    <ul>
+                        <li>ARM Architecture</li>
+                        <li>RTOS</li>
+                        <li>Circuit Design</li>
+                        <li>IoT Integration</li>
+                    </ul>
+                </div>
+    
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming</h3>
+                    </div>
+                    <ul>
+                        <li>Python & C++</li>
+                        <li>MATLAB</li>
+                        <li>Arduino</li>
+                        <li>Assembly</li>
+                    </ul>
+                </div>
+    
+                <div class="illustration-container car-illustration">
+                    <object data="car-repair.svg" type="image/svg+xml" class="car-svg"></object>
+                </div>
+    
+                <div class="illustration-container drone-illustration">
+                    <object data="flying-dron.svg" type="image/svg+xml" class="drone-svg"></object>
+                </div>
+
+                <div class="illustration-container robot">
+                    <object data="robotaha.svg" type="image/svg+xml" class="drone-svg"></object>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- Projects Showcase -->
+<section class="projects" id="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Smart Grid Management -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="electricity.svg" alt="Smart Grid Management">
+                </div>
+                <div class="project-info">
+                    <h3>Smart Grid Management</h3>
+                    <div class="project-tech">
+                        <span>IoT</span>
+                        <span>PLC</span>
+                        <span>SCADA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automated Assessment System -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="exams.svg" alt="Automated Assessment System">
+                </div>
+                <div class="project-info">
+                    <h3>Automated Assessment System</h3>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>ML</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autonomous Mobile Robot -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="robotics.svg" alt="Autonomous Mobile Robot">
+                </div>
+                <div class="project-info">
+                    <h3>Autonomous Mobile Robot</h3>
+                    <div class="project-tech">
+                        <span>ROS2</span>
+                        <span>C++</span>
+                        <span>SLAM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smart Manufacturing Cell -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="firmware.svg" alt="Smart Manufacturing Cell">
+                </div>
+                <div class="project-info">
+                    <h3>Smart Manufacturing Cell</h3>
+                    <div class="project-tech">
+                        <span>PLC</span>
+                        <span>HMI</span>
+                        <span>Digital Twin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>tp066167@mail.apu.edu.my</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Phone</h3>
+                            <p>+60134457353</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Bukit Jalil, Kuala Lumpur</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mody-khairy-0023322ba/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/mahmoud-khairy" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-illustration">
+                    <img src="contact.svg" alt="Contact illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
