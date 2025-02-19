@@ -107,7 +107,7 @@ Animation timings and effects can be adjusted in the `script.js` file within the
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Appache License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
