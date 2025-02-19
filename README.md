@@ -2,6 +2,10 @@
 
 A responsive and animated portfolio website showcasing professional experience, skills, and projects with elegant animations and modern design elements.
 
+![image](https://github.com/user-attachments/assets/35bf20ed-2a8c-48df-9069-311f7c494918)
+
+
+
 ## Features
 
 ### Visual Design
